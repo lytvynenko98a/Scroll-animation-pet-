@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Set up the overall layout and styling */
+.scroll-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.scroll-content {
+  display: flex;
+  width: fit-content; /* Adjust as needed */
+  height: 100%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* Smooth transition for content movement */
+}
+
+.progress-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initial width of the progress line */
+  height: 2px;
+  background-color: #000; /* Change color as needed */
+  transition: width 0.3s ease; /* Smooth transition for line movement */
+}
+
+  </style>
+</head>
+<body>
+  <div class="scroll-section">
+    <div class="scroll-content">
+      <section class="one">
+        <h1 class="scroll" data-rate=".4" data-direction="horisontal">ocean stuff</h1>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
+        <p>watermark</p>
+    </section>
+    </div>
+    <svg class="progress-line" width="333" height="6" viewBox="0 0 3332 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="path1" d="M0 3H3332" stroke="#6638B6" stroke-width="5"/>
+  </svg>
+  </div>
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const scrollSection = document.querySelector('.scroll-section');
+    const scrollContent = document.querySelector('.scroll-content');
+    const progressLine = document.querySelector('.progress-line');
+    
+    // Update scroll effect on scroll event
+    scrollSection.addEventListener('scroll', function() {
+      const scrollPercentage = (scrollSection.scrollLeft / (scrollContent.scrollWidth - scrollSection.clientWidth)) * 100;
+      scrollContent.style.transform = `translateX(-${scrollPercentage}%)`;
+      progressLine.style.width = `${scrollPercentage}%`;
+    });
+  });
+  </script>
+</body>
+</html>
