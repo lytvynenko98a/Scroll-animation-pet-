@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 * {
     margin: 0;
@@ -140,4 +140,78 @@ nav ul li a:hover{
     font-size: 24px;
     font-weight: 600;
     color: #6638B6;
+}
+.third{
+    height: 100vh;
+    padding: 0;
+    margin-top: 280px;
+}
+.sticky-parent{
+    height: 233vh; //scroll-section must have the same number of width as here the height
+}
+.sticky{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+}
+.scroll-section{
+    position: absolute;
+    top: -40px;
+    height: 100vh;
+    width: 233vw;
+    will-change: transform;
+    display: flex;
+    background: url(assets/SLIDER.png);
+    background-repeat: no-repeat;
+    max-height: 885px;
+    //justify-content: space-between;
+}
+.scroll-section .first{
+    display: flex;
+    flex-direction: column;
+}
+.scroll-section .first .one,.scroll-section .first .two{
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.scroll-section .first .two{
+    color: transparent;
+    -webkit-text-stroke: 0.5px white;
+   
+}
+.scroll-section .first .three{
+    margin-top: 60px;
+    margin-left: 80px;
+    width: 693px;
+}
+.scroll-section .first .three h1, .scroll-section .second .one h1, .scroll-section .third-s .one h1, .scroll-section .fourth .one h1{
+    color: #6638B6;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.scroll-section .first .three p, .scroll-section .second .one p, .scroll-section .third-s .one p, .scroll-section .fourth .one p{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+.scroll-section .second, .scroll-section .fourth{
+    display: flex;
+    align-items: flex-end;
+}
+.scroll-section .second .one{
+    margin-left: -41px;
+    width: 693px;
+}
+.scroll-section .third-s .one{
+    margin-top: 200px;width: 693px;
+}
+.scroll-section .fourth .one{
+    width: 693px;
+    padding-left: 24px;
 }
