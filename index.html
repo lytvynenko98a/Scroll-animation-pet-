@@ -8,19 +8,28 @@
     <title>Lorem Ipsum</title>
 </head>
 <body>
+    
     <header>
-        <div class="navbar">
-            <img src="assets/Logo.svg" alt="lorem" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem ipsum</a></li>
-                </ul>
-            </nav>
-            <button class="lets-talk">let`s talk</button>
-            <img src="assets/menu-icon.svg" alt="menu" class="menu-icon">
+        <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+            <img src="assets/Logo.svg" alt="">
+          </div>
+          <div class="menu-items">
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a class="lets-talk-m" href="#">let`s talk</a></li>
+          </div>
         </div>
+      </div>
+    </nav>
     </header>
     <main>
         <section class="first">
@@ -42,11 +51,11 @@
         <section class="second">
             <div class="left">
                 <h1>lorem ipsum</h1>
-                <svg xmlns="http://www.w3.org/2000/svg" width="630" height="61" viewBox="0 0 630 61" fill="none">
+                <svg class="svg1" xmlns="http://www.w3.org/2000/svg" width="630" height="61" viewBox="0 0 630 61" fill="none">
                     <path d="M0 2H555.999L628 59" stroke="#6638B6" stroke-width="4"/>
                 </svg>
 
-                <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:333px; padding-left:70px;">
+                <svg class="circle" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:333px; padding-left:70px;">
                 <path id="circularText" fill="none" stroke="none" 
                     d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z" />  
                 <text font-size="23" fill="#FFF" letter-spacing="1" font-family="sans-serif" font-weight="bold">
@@ -62,13 +71,15 @@
         <section class="third">
             
             <div class="sticky-parent">
-                <div class="sticky">
-                    
+                <div class="sticky">     
                     <div class="scroll-section">
-                        <section class="first" style="width:749px">
-                            <svg width="2600" height="6" viewBox="0 0 3332 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:561px">
+                        <section class="first">
+                            <svg class="svg2" width="2600" height="6" viewBox="0 0 3332 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path id="path1" d="M0 3H3332" stroke="#6638B6" stroke-width="5"/>
-                                </svg>
+                            </svg>
+                            <svg class="svg2-m" width="1300" height="6" viewBox="0 0 3332 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path id="path2" d="M0 3H3332" stroke="#6638B6" stroke-width="5"/>
+                            </svg>
                             <h1 class="one">lorem ipsum dolor sit</h1>
                             <h1 class="two">lorem ipsum dolor sit:</h1>
                             <div class="three">
@@ -76,19 +87,19 @@
                                 <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet. Nullam quis urna porttitor nulla ipsum condimentum quis id ipsum. </p>
                             </div>
                         </section>
-                        <section class="second" style="width:854px">
+                        <section class="second">
                             <div class="one">
                                 <h1>2<br>lorem ipsum</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet. Nullam quis urna porttitor nulla ipsum condimentum quis id ipsum. </p>
                             </div>
                         </section>
-                        <section class="third-s" style="width:1109px">
+                        <section class="third-s">
                             <div class="one">
                                 <h1>3<br>lorem ipsum</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet.  </p>
                             </div>
                         </section>
-                        <section class="fourth"style="width:683px">
+                        <section class="fourth">
                             <div class="one">
                                 <h1>4<br>lorem ipsum</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet.  </p>
@@ -102,40 +113,8 @@
             
         </section>
     </main>
-    <script>
-        const stickySections = [...document.querySelectorAll('.sticky')]
-
-        window.addEventListener('scroll', (e) =>{
-            for(let i = 0; i < stickySections.length; i++){
-                transform(stickySections[i])
-            }
-        })
-        function transform(section){
-            const offsetTop = section.parentElement.offsetTop;
-            console.log(offsetTop)
-            const scrollSection = section.querySelector('.scroll-section')
-            
-            let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
-            percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
-            scrollSection.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
-
-        }
+    <script src="script.js">
+        
     </script>
-  <script>
-    let path = document.querySelector('#path1');
-    let pathLength = path.getTotalLength();
-    path.style.strokeDasharray = pathLength;
-    
-    let thirdSection = document.querySelector('.third');
-    let thirdSectionOffsetTop = thirdSection.offsetTop;
-    let thirdSectionHeight = thirdSection.clientHeight;
-    
-    window.addEventListener('scroll', () => {
-        var scrollPercentage = (window.scrollY - thirdSectionOffsetTop) / thirdSectionHeight;
-        scrollPercentage = Math.max(0, Math.min(1, scrollPercentage)); // Ensure scrollPercentage is between 0 and 1
-        var drawLength = pathLength * scrollPercentage;
-        path.style.strokeDashoffset = pathLength - drawLength;
-    });
-</script>
-</body>
+    </body>
 </html>

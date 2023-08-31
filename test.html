@@ -1,73 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    /* Style your sections here */
-
-    .scrolling-section {
-      display: flex;
-      overflow-x: auto;
-      /* Other styles for the horizontal scrolling section */
-    }
-
-    svg {
-      /* Style your SVG here */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Lorem Ipsum</title>
 </head>
 <body>
-  <section class="third">
-            <div class="line-container">
-              <svg width="3332" height="6" viewBox="0 0 3332 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 3H3332" stroke="#6638B6" stroke-width="5"/>
-                </svg>
-                                                 
+    
+    <header>
+        <div class="navbar">
+            <img src="assets/Logo.svg" alt="lorem" class="logo" >
+            <img src="assets/menu-icon.svg" alt="menu" class="menu-icon" onclick="togglemenu()">
+            <nav >
+            <ul id="menuList">
+                    <li><a href="#">lorem ipsum</a></li>
+                    <li><a href="#">lorem ipsum</a></li>
+                    <li><a href="#">lorem ipsum</a></li>
+                    <button class="lets-talk-m">let`s talk</button>
+                </ul>
+            </nav>
+            <button class="lets-talk-d">let`s talk</button>
+        </div>
+    </header>
+    <main>
+        <section class="first">
+            <div class="left">
+                <h1 >Lorem ipsum dolor sit amet consectetur. Diam fames integer </h1>
+                <button class="join-us">
+                    join us
+                </button>
             </div>
-            <section class="one">
-                <h1 class="scroll" data-rate=".4" data-direction="horisontal">ocean stuff</h1>
-            </section>
-            <section class="two">
-                <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
-                <p>watermark</p>
-            </section>
-            <section class="two">
-              <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
-              <p>watermark</p>
-          </section>
-          <section class="two">
-            <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
-            <p>watermark</p>
+            <div class="right">
+                <div class="visa-behind">
+                    <img src="assets/visa.png" alt="">
+                </div>
+                <div class="visa-front">
+                    <img src="assets/visa.png" alt="">
+                </div>
+            </div>
         </section>
-        <section class="two">
-          <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
-          <p>watermark</p>
-      </section>
-      <section class="two">
-        <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
-        <p>watermark</p>
-    </section>
-    <section class="two">
-      <h1 class="scroll" data-rate=".2" data-direction="horisontal">omg</h1>
-      <p>watermark</p>
-  </section>
-  
+        <section class="second">
+            <div class="left">
+                <h1>lorem ipsum</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="630" height="61" viewBox="0 0 630 61" fill="none">
+                    <path d="M0 2H555.999L628 59" stroke="#6638B6" stroke-width="4"/>
+                </svg>
+
+                <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:333px; padding-left:70px;">
+                <path id="circularText" fill="none" stroke="none" 
+                    d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z" />  
+                <text font-size="23" fill="#FFF" letter-spacing="1" font-family="sans-serif" font-weight="bold">
+                <textPath xlink:href="#circularText" side="left" startOffset="1">LOREM IPSUM LOREM IPSUM LOREM IPSUM</textPath></text>
+                </svg>
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet consectetur. A enim dignissim cras malesuada morbi vel in. Dui lacus id pellentesque feugiat facilisis nisl tempus duis. </p>
+                <p><span>Nulla massa amet morbi </span>faucibus viverra arcu auctor ullamcorper. Nec habitant viverra risus mattis. Tincidunt lacus ac dolor non ut. Proin sagittis risus porttitor dis. Sed eros nisl eget metus enim. <span>Nibh risus massa aliquet aliquet eu purus commodo suspendisse malesuada.</span></p>
+                <p>Vestibulum volutpat id urna varius commodo nibh rutrum. Sodales mi at magna pharetra. <span>Erat diam mauris sem a. </span>Lorem justo cursus ornare enim. Condimentum aliquam egestas nam euismod. Aliquet purus imperdiet semper diam pulvinar sed.</p>
+            </div>
+        </section>
+        <section class="third">
+            
+            <div class="sticky-parent">
+                <div class="sticky">     
+                    <div class="scroll-section">
+                        <section class="first" style="width:749px">
+                            <svg width="2600" height="6" viewBox="0 0 3332 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:561px">
+                                <path id="path1" d="M0 3H3332" stroke="#6638B6" stroke-width="5"/>
+                                </svg>
+                            <h1 class="one">lorem ipsum dolor sit</h1>
+                            <h1 class="two">lorem ipsum dolor sit:</h1>
+                            <div class="three">
+                                <h1>1<br>lorem ipsum</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet. Nullam quis urna porttitor nulla ipsum condimentum quis id ipsum. </p>
+                            </div>
+                        </section>
+                        <section class="second" style="width:854px">
+                            <div class="one">
+                                <h1>2<br>lorem ipsum</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet. Nullam quis urna porttitor nulla ipsum condimentum quis id ipsum. </p>
+                            </div>
+                        </section>
+                        <section class="third-s" style="width:1109px">
+                            <div class="one">
+                                <h1>3<br>lorem ipsum</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet.  </p>
+                            </div>
+                        </section>
+                        <section class="fourth"style="width:683px">
+                            <div class="one">
+                                <h1>4<br>lorem ipsum</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur. Eget volutpat et sit nunc metus auctor morbi. Lectus auctor ac senectus molestie ut tincidunt sit convallis amet.  </p>
+                            </div>
+                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
         </section>
     </main>
-    <script>
-        let path = document.querySelector('path')
-        let pathLength = path.getTotalLength()
-
-        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+    <script src="script.js">
         
-        path.style.strokeDashoffset = pathLength;
-
-        window.addEventListener('scroll', () => {
-            var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-            var drawLength = pathLength * scrollPercentage;
-
-            path.style.strokeDashoffset = pathLength - drawLength;
-        })
     </script>
-</body>
+    </body>
 </html>
