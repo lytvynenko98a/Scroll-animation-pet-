@@ -122,13 +122,19 @@ function transform(section){
 let path = document.querySelector('#path1');
     let pathLength = path.getTotalLength();
     path.style.strokeDasharray = pathLength;
+    const screenWidth = window.innerWidth;
     
+
     let thirdSection = document.querySelector('.third');
     let thirdSectionOffsetTop = thirdSection.offsetTop;
     let thirdSectionHeight = thirdSection.clientHeight;
     
     window.addEventListener('scroll', () => {
-        var scrollPercentage = ((window.scrollY - thirdSectionOffsetTop) / thirdSectionHeight) / 1.5;
+        if (screenWidth > 900 && screenWidth < 1121){
+            var scrollPercentage = ((window.scrollY - thirdSectionOffsetTop) / thirdSectionHeight) / 5;
+        }else{
+            var scrollPercentage = ((window.scrollY - thirdSectionOffsetTop) / thirdSectionHeight) / 1.5;
+        }
         scrollPercentage = Math.max(0, Math.min(1, scrollPercentage)); // Ensure scrollPercentage is between 0 and 1
         var drawLength = pathLength * scrollPercentage;
         path.style.strokeDashoffset = pathLength - drawLength;
