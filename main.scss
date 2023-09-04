@@ -250,10 +250,12 @@ input{
 
 
 @media only screen and (max-width: 700px){
+   
 html{
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
+    overflow: auto;
 }
 
 header{
@@ -381,9 +383,10 @@ header{
     }
     .logo img{
     width: 126px;
-
     }
     
+    
+
     .nav-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
     }
@@ -403,10 +406,12 @@ header{
     .nav-container input[type="checkbox"]:checked ~ .logo{
     display: none;
     }
+
+
     .lets-talk-m{
-    margin-top: 310px;
-    width: 303px;
-    margin-left: 147px;
+        margin-top: 170px;
+        width: 303px;
+        margin-left: 147px;
     }
 
     main .first{
@@ -541,4 +546,11 @@ header{
         line-height: 16px;
     }
     
+
+    
+}
+@media only screen and (min-width: 390px){
+    .sticky-parent {
+        height: 415vh;
+    }
 }

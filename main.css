@@ -285,6 +285,7 @@ input {
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
+    overflow: auto;
   }
   header {
     padding: 0;
@@ -413,7 +414,7 @@ input {
     display: none;
   }
   .lets-talk-m {
-    margin-top: 310px;
+    margin-top: 170px;
     width: 303px;
     margin-left: 147px;
   }
@@ -549,5 +550,10 @@ input {
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
+  }
+}
+@media only screen and (min-width: 390px) {
+  .sticky-parent {
+    height: 415vh;
   }
 }/*# sourceMappingURL=main.css.map */

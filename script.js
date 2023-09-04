@@ -1,14 +1,68 @@
-var menuList = document.getElementById("menuList");
+document.addEventListener("DOMContentLoaded", function() {
+    const checkbox = document.querySelector(".checkbox");
+    function handleCheckboxChange() {
+        const body = document.querySelector("html");
 
-function togglemenu(){
-    console.log("togglemenu function called");
-    if(menuList.style.display == "none"){
-        menuList.style.display = "block";
+        
+        if (checkbox.checked) {
+        
+            body.style.overflow = "hidden";
+        } else {
+            body.style.overflow = "auto";
+        }
     }
-    else{
-        menuList.style.display="none";
-    }
+    
+    checkbox.addEventListener("change", handleCheckboxChange);
+});
+
+
+// Function to update margin-top based on screen width
+const element1 = document.querySelector('.lets-talk-m');
+const sticky_parent = document.querySelector('.sticky-parent');
+const scroll_section = document.querySelector('.scroll-section');
+const scroll_section_first_three = document.querySelector('.scroll-section .first .three');
+const scroll_section_second = document.querySelector('.scroll-section .second');
+const svg2_m = document.querySelector('.svg2-m');
+
+const third_s_one = document.querySelector('.third-s .one');
+function updateMarginTop() {
+    const screenWidth = window.innerWidth;
+    let marginTopValue;
+    let sticky_parentValue;
+    let scroll_sectionValue;
+    let scroll_section_first_threeValue;
+    let scroll_section_secondValue;
+    let svg2_mValue;
+    let third_s_oneValue;
+
+    if (screenWidth < 390) {
+        marginTopValue = '170px';sticky_parentValue = '415vh';scroll_sectionValue = '204px';scroll_section_first_threeValue = '23px';svg2_mValue = '468px';third_s_oneValue = '255px';scroll_section_secondValue='517px';
+    } else if (screenWidth < 700) {
+        marginTopValue = '300px';
+    } 
+    element1.style.marginTop = marginTopValue;
+    sticky_parent.style.height = sticky_parentValue;
+    scroll_section.style.backgroundPositionY = scroll_sectionValue;
+    scroll_section_first_three.style.marginTop = scroll_section_first_threeValue;
+    scroll_section_second.style.marginTop = scroll_section_secondValue;
+    svg2_m.style.top = svg2_mValue;
+    third_s_one.style.marginTop = third_s_oneValue;
+
+
+
 }
+updateMarginTop();
+window.addEventListener('resize', updateMarginTop);
+
+// function togglemenu(){
+//     console.log("togglemenu function called");
+//     if(html.style.overflow == "auto"){
+//         html.style.overflow = "hidden";
+//     }
+//     else{
+//         html.style.overflow == "auto"
+//     }
+// }
 
 const stickySections = [...document.querySelectorAll('.sticky')]
 
