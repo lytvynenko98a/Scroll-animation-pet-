@@ -551,9 +551,4 @@ input {
     font-weight: 400;
     line-height: 16px;
   }
-}
-@media only screen and (min-width: 390px) {
-  .sticky-parent {
-    height: 415vh;
-  }
 }/*# sourceMappingURL=main.css.map */

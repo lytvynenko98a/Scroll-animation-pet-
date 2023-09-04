@@ -17,42 +17,73 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // Function to update margin-top based on screen width
-const element1 = document.querySelector('.lets-talk-m');
+const letstalkm = document.querySelector('.lets-talk-m');
 const sticky_parent = document.querySelector('.sticky-parent');
 const scroll_section = document.querySelector('.scroll-section');
 const scroll_section_first_three = document.querySelector('.scroll-section .first .three');
 const scroll_section_second = document.querySelector('.scroll-section .second');
 const svg2_m = document.querySelector('.svg2-m');
-
 const third_s_one = document.querySelector('.third-s .one');
+const scroll_section_fourth = document.querySelector('.scroll-section .fourth');
+
 function updateMarginTop() {
     const screenWidth = window.innerWidth;
-    let marginTopValue;
+    console.log(screenWidth);
+    let letstalkmValue;
     let sticky_parentValue;
+    let sticky_parentValueTablet;
+
     let scroll_sectionValue;
+    let scroll_sectionValueTablet;
+
     let scroll_section_first_threeValue;
     let scroll_section_secondValue;
+    let scroll_section_secondValueHeight;
+
+    let scroll_section_fourthValueTablet;
+    let sticky_parentValueTabletAir;
+
     let svg2_mValue;
     let third_s_oneValue;
 
+
+
     if (screenWidth < 390) {
-        marginTopValue = '170px';sticky_parentValue = '415vh';scroll_sectionValue = '204px';scroll_section_first_threeValue = '23px';svg2_mValue = '468px';third_s_oneValue = '255px';scroll_section_secondValue='517px';
+        letstalkmValue = '170px';sticky_parentValue = '415vh';scroll_sectionValue = '204px';scroll_section_first_threeValue = '23px';svg2_mValue = '468px';third_s_oneValue = '255px';scroll_section_secondValue='517px';
     } else if (screenWidth < 700) {
-        marginTopValue = '300px';
-    } 
-    element1.style.marginTop = marginTopValue;
+        letstalkmValue = '300px';
+    }else if (screenWidth > 900 && screenWidth < 1123) {
+            sticky_parentValueTabletAir = '380vh';
+            scroll_section_secondValueHeight = '846px';
+            scroll_sectionValueTablet = '309vw';
+            scroll_section_fourthValueTablet = '817px'
+    } else if (screenWidth > 1100 && screenWidth < 1200) {
+    scroll_section_secondValueHeight = '846px';
+    sticky_parentValueTablet = '300vh';
+    scroll_sectionValueTablet = '309vw';
+    scroll_section_fourthValueTablet = '817px'
+    }
+    letstalkm.style.marginTop = letstalkmValue;
     sticky_parent.style.height = sticky_parentValue;
     scroll_section.style.backgroundPositionY = scroll_sectionValue;
     scroll_section_first_three.style.marginTop = scroll_section_first_threeValue;
     scroll_section_second.style.marginTop = scroll_section_secondValue;
     svg2_m.style.top = svg2_mValue;
     third_s_one.style.marginTop = third_s_oneValue;
+    
+    scroll_section_second.style.height = scroll_section_secondValueHeight;
+    scroll_section_fourth.style.height = scroll_section_fourthValueTablet;
+    sticky_parent.style.height = sticky_parentValueTablet;
+    scroll_section.style.width = scroll_sectionValueTablet;
+    sticky_parent.style.height = sticky_parentValueTabletAir;
+
 
 
 
 }
 updateMarginTop();
 window.addEventListener('resize', updateMarginTop);
+console.log(window)
 
 // function togglemenu(){
 //     console.log("togglemenu function called");
