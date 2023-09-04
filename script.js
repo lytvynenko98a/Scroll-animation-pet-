@@ -52,12 +52,18 @@ function updateMarginTop() {
         letstalkmValue = '170px';sticky_parentValue = '415vh';scroll_sectionValue = '204px';scroll_section_first_threeValue = '23px';svg2_mValue = '468px';third_s_oneValue = '255px';scroll_section_secondValue='517px';
     } else if (screenWidth < 700) {
         letstalkmValue = '300px';
-    }else if (screenWidth > 900 && screenWidth < 1123) {
-            sticky_parentValueTabletAir = '380vh';
+    }else if (screenWidth > 900 && screenWidth < 1121) {
+            sticky_parentValueTabletAir = '590vh';
+            scroll_section_secondValueHeight = '846px';
+            scroll_sectionValueTablet = '453vw';
+            scroll_section_fourthValueTablet = '817px';
+    }else if (screenWidth > 1121 && screenWidth < 1170) {
+        sticky_parentValueTabletAir = '340vh';
             scroll_section_secondValueHeight = '846px';
             scroll_sectionValueTablet = '309vw';
-            scroll_section_fourthValueTablet = '817px'
-    } else if (screenWidth > 1100 && screenWidth < 1200) {
+            scroll_section_fourthValueTablet = '817px';
+    
+    } else if (screenWidth > 1170 && screenWidth < 1200) {
     scroll_section_secondValueHeight = '846px';
     sticky_parentValueTablet = '300vh';
     scroll_sectionValueTablet = '309vw';
